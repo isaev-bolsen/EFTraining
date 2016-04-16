@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Linq;
+using System.Data.Entity;
 
 namespace DataAdapter
 {
     public class DataBase
     {
+        static DataBase()
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, DataAdapter.Migrations.Configuration>());
+        }
+
         public int GetCount()
         {
             using (DataContext DB = new DataContext())
