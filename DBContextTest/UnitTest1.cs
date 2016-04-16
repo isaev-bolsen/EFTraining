@@ -1,7 +1,6 @@
-﻿using System;
+﻿using DataAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataAdapter;
-using System.Linq;
+using System;
 
 namespace DBContextTest
 {
