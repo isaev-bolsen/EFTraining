@@ -5,6 +5,7 @@ namespace DataAdapter
 {
     internal class Train
     {
+        public Guid ID { get; set; }
         public string StationFrom { get; set; }
         public DateTime Departure { get; set; }
         public string StationTo { get; set; }
@@ -13,6 +14,6 @@ namespace DataAdapter
 
     internal class DataContext : DbContext
     {
-        internal DbSet<Train> Trains { get; set; }
+        public DbSet<Train> Trains { get; set; }
     }
 }
